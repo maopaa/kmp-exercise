@@ -1,10 +1,4 @@
-package org.maopaa.quicknotes.notes.domain.entities
-
-import kotlinx.datetime.Clock
-import kotlinx.datetime.LocalDateTime
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.format.DateTimeFormat
-import kotlinx.datetime.toLocalDateTime
+package org.maopaa.kmp.notes.domain.entities
 
 data class Note(
     val id: String,

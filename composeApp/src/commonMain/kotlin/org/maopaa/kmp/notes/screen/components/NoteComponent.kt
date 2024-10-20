@@ -1,4 +1,4 @@
-package org.maopaa.quicknotes.notes.screen.components
+package org.maopaa.kmp.notes.screen.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -18,12 +18,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import kotlinx.datetime.LocalDateTime
-import kotlinx.datetime.format.FormatStringsInDatetimeFormats
-import kotlinx.datetime.format.byUnicodePattern
-import org.maopaa.quicknotes.notes.domain.entities.Note
+import org.maopaa.kmp.notes.domain.entities.Note
 
-@OptIn(FormatStringsInDatetimeFormats::class)
 @Composable
 fun NoteComponent(
     note: Note,

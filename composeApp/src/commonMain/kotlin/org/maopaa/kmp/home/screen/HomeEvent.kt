@@ -1,4 +1,4 @@
-package org.maopaa.quicknotes.home.screen
+package org.maopaa.kmp.home.screen
 
 sealed interface HomeEvent {
 

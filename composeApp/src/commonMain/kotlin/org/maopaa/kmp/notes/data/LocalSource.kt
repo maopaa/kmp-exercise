@@ -1,6 +1,6 @@
-package org.maopaa.quicknotes.notes.data
+package org.maopaa.kmp.notes.data
 
-import org.maopaa.quicknotes.notes.data.dto.NoteDto
+import org.maopaa.kmp.notes.data.dto.NoteDto
 
 class LocalSource {
 

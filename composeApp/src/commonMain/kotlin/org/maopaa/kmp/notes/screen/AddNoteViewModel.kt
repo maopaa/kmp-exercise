@@ -1,4 +1,4 @@
-package org.maopaa.quicknotes.notes.screen
+package org.maopaa.kmp.notes.screen
 
 import cafe.adriel.voyager.core.model.ScreenModel
 import cafe.adriel.voyager.core.model.screenModelScope
@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import org.maopaa.quicknotes.notes.domain.repositories.NoteRepository
+import org.maopaa.kmp.notes.domain.repositories.NoteRepository
 
 class AddNoteViewModel(
     private val repository: NoteRepository

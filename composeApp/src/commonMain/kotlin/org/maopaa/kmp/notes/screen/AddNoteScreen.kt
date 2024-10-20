@@ -1,4 +1,4 @@
-package org.maopaa.quicknotes.notes.screen
+package org.maopaa.kmp.notes.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,17 +25,11 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import kotlinx.datetime.Clock
-import kotlinx.datetime.Instant
-import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
-import kotlinx.datetime.format
-import kotlinx.datetime.format.DateTimeComponents
-import kotlinx.datetime.format.DateTimeFormat
 import kotlinx.datetime.format.FormatStringsInDatetimeFormats
-import kotlinx.datetime.format.byUnicodePattern
 import kotlinx.datetime.toLocalDateTime
-import org.maopaa.quicknotes.notes.domain.NoteModule
-import org.maopaa.quicknotes.notes.domain.entities.Note
+import org.maopaa.kmp.notes.domain.NoteModule
+import org.maopaa.kmp.notes.domain.entities.Note
 
 object AddNoteScreen: Screen {
 

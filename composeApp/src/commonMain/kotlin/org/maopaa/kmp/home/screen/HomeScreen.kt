@@ -1,4 +1,4 @@
-package org.maopaa.quicknotes.home.screen
+package org.maopaa.kmp.home.screen
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -27,9 +27,9 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import org.maopaa.quicknotes.notes.domain.NoteModule
-import org.maopaa.quicknotes.notes.screen.AddNoteScreen
-import org.maopaa.quicknotes.notes.screen.components.NoteComponent
+import org.maopaa.kmp.notes.domain.NoteModule
+import org.maopaa.kmp.notes.screen.AddNoteScreen
+import org.maopaa.kmp.notes.screen.components.NoteComponent
 
 object HomeScreen: Screen {
 

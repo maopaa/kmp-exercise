@@ -1,7 +1,7 @@
-package org.maopaa.quicknotes.notes.data.dto
+package org.maopaa.kmp.notes.data.dto
 
 import kotlinx.datetime.LocalDateTime
-import org.maopaa.quicknotes.notes.domain.entities.Note
+import org.maopaa.kmp.notes.domain.entities.Note
 
 data class NoteDto (
     val id: String,

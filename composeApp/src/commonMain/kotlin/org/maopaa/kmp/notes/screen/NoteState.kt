@@ -1,6 +1,6 @@
-package org.maopaa.quicknotes.notes.screen
+package org.maopaa.kmp.notes.screen
 
-import org.maopaa.quicknotes.notes.domain.entities.Note
+import org.maopaa.kmp.notes.domain.entities.Note
 
 data class NoteState(
     val note: Note = Note.empty(),

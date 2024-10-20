@@ -1,6 +1,6 @@
-package org.maopaa.quicknotes.home.screen
+package org.maopaa.kmp.home.screen
 
-import org.maopaa.quicknotes.notes.domain.entities.Note
+import org.maopaa.kmp.notes.domain.entities.Note
 
 data class HomeState(
     val list: List<Note> = emptyList(),

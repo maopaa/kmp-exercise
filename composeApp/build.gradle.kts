@@ -67,7 +67,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.maopaa.quicknotes"
+    namespace = "org.maopaa.kmp"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
@@ -75,7 +75,7 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        applicationId = "org.maopaa.quicknotes"
+        applicationId = "org.maopaa.kmp"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -110,11 +110,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "org.maopaa.quicknotes.MainKt"
+        mainClass = "org.maopaa.kmp.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "org.maopaa.quicknotes"
+            packageName = "org.maopaa.kmp"
             packageVersion = "1.0.0"
         }
     }

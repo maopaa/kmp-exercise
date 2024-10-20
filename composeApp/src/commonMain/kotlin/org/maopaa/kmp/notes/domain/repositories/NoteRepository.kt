@@ -1,6 +1,6 @@
-package org.maopaa.quicknotes.notes.domain.repositories
+package org.maopaa.kmp.notes.domain.repositories
 
-import org.maopaa.quicknotes.notes.domain.entities.Note
+import org.maopaa.kmp.notes.domain.entities.Note
 
 interface NoteRepository {
     suspend fun getById(id: String): Result<Note>

@@ -1,9 +1,9 @@
-package org.maopaa.quicknotes.notes.domain.repositories.impl
+package org.maopaa.kmp.notes.domain.repositories.impl
 
-import org.maopaa.quicknotes.notes.data.LocalSource
-import org.maopaa.quicknotes.notes.data.dto.NoteDto
-import org.maopaa.quicknotes.notes.domain.entities.Note
-import org.maopaa.quicknotes.notes.domain.repositories.NoteRepository
+import org.maopaa.kmp.notes.data.LocalSource
+import org.maopaa.kmp.notes.data.dto.NoteDto
+import org.maopaa.kmp.notes.domain.entities.Note
+import org.maopaa.kmp.notes.domain.repositories.NoteRepository
 
 class NoteRepositoryImpl(
     private val local: LocalSource
