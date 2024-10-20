@@ -1,4 +1,4 @@
-rootProject.name = "kmp-template"
+rootProject.name = "quicknotes"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

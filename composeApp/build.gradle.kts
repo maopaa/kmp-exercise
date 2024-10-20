@@ -16,9 +16,9 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     jvm("desktop")
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -29,13 +29,17 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
         val desktopMain by getting
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.voyager.koin)
+            implementation(libs.voyager.hilt)
+            implementation(libs.voyager.kodein)
+            implementation(libs.voyager.rxjava)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -44,22 +48,34 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            implementation(libs.kotlinx.datetime)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.screenModel)
+            implementation(libs.voyager.bottomSheetNavigator)
+            implementation(libs.voyager.tabNavigator)
+            implementation(libs.voyager.transitions)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
+            implementation(libs.voyager.kodein)
+            implementation(libs.voyager.rxjava)
         }
     }
 }
 
 android {
-    namespace = "org.maopaa.kmp"
+    namespace = "org.maopaa.quicknotes"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+    sourceSets["main"].res.srcDirs("src/androidMain/res")
+    sourceSets["main"].resources.srcDirs("src/commonMain/resources")
+
     defaultConfig {
-        applicationId = "org.maopaa.kmp"
+        applicationId = "org.maopaa.quicknotes"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -79,19 +95,26 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        compose = true
+    }
+    dependencies {
+        debugImplementation(compose.uiTooling)
+    }
 }
-
 dependencies {
-    debugImplementation(compose.uiTooling)
+    implementation(libs.androidx.material3.android)
+    implementation(libs.firebase.database.ktx)
+    implementation(libs.androidx.core.i18n)
 }
 
 compose.desktop {
     application {
-        mainClass = "org.maopaa.kmp.MainKt"
+        mainClass = "org.maopaa.quicknotes.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "org.maopaa.kmp"
+            packageName = "org.maopaa.quicknotes"
             packageVersion = "1.0.0"
         }
     }
